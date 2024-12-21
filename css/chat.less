@@ -1,0 +1,115 @@
+@import "styles.css";
+
+.wrapper img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.chat-area {
+  header {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+
+    .back-icon {
+      font-size: 18px;
+      color: #333;
+    }
+    img {
+      height: 45px;
+      width: 45px;
+      margin: 0 15px;
+    }
+    .details {
+      span {
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  } //header
+
+  .chat-box {
+    height: 500px;
+    overflow-y: auto;
+    background: #f7f7f7;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+      0 -32px 32px -32px rgb(0 0 0 / 5%);
+
+    .chat {
+      margin: 15px 0;
+
+      p {
+        word-wrap: break-word;
+        padding: 8px 16px;
+        box-shadow: 0 0 32px rgb(0 0 0 / 8%), 0 16px 16px -16px rgb(0 0 0 / 10%);
+      }
+    }
+
+    .outgoing {
+      display: flex;
+
+      .details {
+        margin-left: auto;
+        max-width: calc(100% - 130px);
+        p {
+          background: #333;
+          color: #fff;
+          border-radius: 18px 18px 0 18px;
+        }
+      }
+    } //.outgoing
+
+    .incoming {
+      display: flex;
+      align-items: flex-end;
+
+      img {
+        height: 35px;
+        width: 35px;
+      }
+
+      .details {
+        margin-left: 10px;
+        margin-right: auto;
+        max-width: calc(100% - 130px);
+        p {
+          background: #fff;
+          color: #333;
+          border-radius: 18px 18px 18px 0;
+        }
+      }
+    } //.incoming
+  } //.chat-box
+
+  .chat-box::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .typing-area {
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      height: 45px;
+      width: calc(100% - 58px);
+      font-size: 17px;
+      border: 1px solid #ccc;
+      padding: 0 13px;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+
+    button {
+      width: 55px;
+      border: none;
+      outline: none;
+      background: #333;
+      color: #fff;
+      font-size: 19px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+  } //.typing-area
+}
